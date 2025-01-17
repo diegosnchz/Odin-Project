@@ -9,17 +9,18 @@ function getComputerChoice() {
     return "paper";
   }
 }
-
+//toLowerCase al ser un método tiene que ir siempre con los paréntesis y LO MISMO CON LAS FUNCIONES DIEGO POR DIOS...
 function getHumanChoice(choice){
-  if (choice.toLowerCase === "rock" && getComputerChoice === "scissors"){
+  if (choice.toLowerCase() === "rock" && getComputerChoice() === "scissors"){
     console.log("YEY YOU WON!!");
-  } else if (choice.toLowerCase === "paper" && getComputerChoice === "rock"){
+  } else if (choice.toLowerCase() === "paper" && getComputerChoice() === "rock"){
     console.log("YEY YOU WON");
-  } else if (choice.toLowerCase === "scissors" && getComputerChoice === "paper"){
+  } else if (choice.toLowerCase() === "scissors" && getComputerChoice() === "paper"){
     console.log("YEY YOU WON");
   } else {
     console.log("you lost bud, get gud");
   }
 }
 
-let choice = prompt("Choose wisely: rock || paper || scissors");
+let choice = prompt("Choose wisely: Rock || Paper || Scissors");
+getHumanChoice(choice);
