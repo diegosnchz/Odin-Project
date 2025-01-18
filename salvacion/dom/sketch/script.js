@@ -8,13 +8,14 @@ let createDivs = () => {
   
   for (let i = 0; i < 256; i++){
     let squareDivs = document.createElement("div");
+    squareDivs.class = "divsRojo";
     squareDivs.style.border = "1px solid black"; //borde pa que se vea
     container.appendChild(squareDivs);
   }
 }
 
 container.addEventListener("mouseover", (e) => {
-  squareDivs.style.color = "red";
+  squareDivs.style.backgroundcolor = "red";
 })
 
 createDivs();
