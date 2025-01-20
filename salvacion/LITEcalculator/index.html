@@ -10,30 +10,32 @@
     <tr>
       <td colspan="4"><input type="text" id="resultado" readonly></td>
     </tr>
-    <tr>
-      <td><button>7</button></td>
-      <td><button>8</button></td>
-      <td><button>9</button></td>
-      <td><button>/</button></td>
+    <tr id="calculatorDiv">
+      <td><button id="n7" class="numberCalc" value="7">7</button></td>
+      <td><button id="n8" class="numberCalc" value="8">8</button></td>
+      <td><button id="n9" class="numberCalc" value="9">9</button></td>
+      <td><button id="opDiv" class="operationSelect" value="/">/</button></td>
     </tr>
     <tr>
-      <td><button>4</button></td>
-      <td><button>5</button></td>
-      <td><button>6</button></td>
-      <td><button>*</button></td>
+      <td><button id="n4" class="numberCalc" value="4">4</button></td>
+      <td><button id="n5" class="numberCalc" value="5">5</button></td>
+      <td><button id="n6" class="numberCalc" value="6">6</button></td>
+      <td><button id="opMul" class="operationSelect" value="*">*</button></td>
     </tr>
     <tr>
-      <td><button>1</button></td>
-      <td><button>2</button></td>
-      <td><button>3</button></td>
-      <td><button>-</button></td>
+      <td><button id="n1" class="numberCalc" value="1">1</button></td>
+      <td><button id="n2" class="numberCalc" value="2">2</button></td>
+      <td><button id="n3" class="numberCalc" value="3">3</button></td>
+      <td><button id="opSub" class="operationSelect" value="-">-</button></td>
     </tr>
     <tr>
-      <td><button>C</button></td>
-      <td><button>0</button></td>
-      <td><button>=</button></td>
-      <td><button>+</button></td>
+      <td><button id="clear" value="C">C</button></td>
+      <td><button id="n0" class="numberCalc" value="0">0</button></td>
+      <td><button id="igual" class="igualKey" value="=">=</button></td>
+      <td><button id="opAdd" class="operationSelect" value="+">+</button></td>
     </tr>
   </table>
+
+  <script src="scriptCalc.js"></script>
 </body>
 </html>
