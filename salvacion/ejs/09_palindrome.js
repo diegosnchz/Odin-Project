@@ -1,6 +1,3 @@
-// A car, a man, a maraca.
-// Rats live on no evil star.
-
 let strPrueba1 = "A car, a man, a maraca.";
 let strPrueba2 = "I love people";
 
@@ -9,8 +6,10 @@ const reverse = (string) => {
 }
 
 const itsPalindrome = (string1) => {
-  let string2 = reverse(string1);
-  return string1 == string2 ? true : false;
+  let cleanedString1 = string1.toLowerCase();
+  let string2 = reverse(cleanedString1);
+  return cleanedString1 === string2;
 }
 
-console.log(itsPalindrome(strPrueba1)); 
+console.log(itsPalindrome(strPrueba1)); // debería devolver false
+console.log(itsPalindrome(strPrueba2)); // debería devolver false
