@@ -1,4 +1,4 @@
-let strPrueba1 = "A car, a man, a maraca.";
+let strPrueba1 = "Rats live on no evil star";
 let strPrueba2 = "I love people";
 
 const reverse = (string) => {
@@ -11,5 +11,5 @@ const itsPalindrome = (string1) => {
   return cleanedString1 === string2;
 }
 
-console.log(itsPalindrome(strPrueba1)); // debería devolver false
-console.log(itsPalindrome(strPrueba2)); // debería devolver false
+console.log(itsPalindrome(strPrueba1)); // true
+console.log(itsPalindrome(strPrueba2)); // false
