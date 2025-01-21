@@ -26,3 +26,5 @@ let getAge = (dates) => {
   let ageFini = people.map(yearOfDeath => people.yearOfDeath);
   let ageDif = ageFini - ageIni;
 }
+
+//hacer y terminar. lo que tengo que hacer es leer cada objeto y obtener la edad.
