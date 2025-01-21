@@ -10,10 +10,11 @@ const books = [
   }
 ]
 
-let getTheTiles = (books) => {
-  
+let getTheTitles = (books) => {
+  return books.map(book => book.title);
 }
+
+console.log(getTheTitles(books)); // ['Book', 'Book2']
   
 
 // Your job is to write a function that takes the array and returns an array of titles:
-getTheTiles(books);
