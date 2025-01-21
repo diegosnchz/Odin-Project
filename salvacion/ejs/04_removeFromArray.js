@@ -1,14 +1,15 @@
-let removeFromArray = (array, number) => {
-  return (array.filter(checkSameNumber(array, number)));
-}
+// Implement a function that takes an array and some other arguments then removes the other arguments from that array
 
-let checkSameNumber = (array, number)  => {
+let removeFromArray = (array, number) => {
   for (let i = 0; i<array.length; i++) {
-    if (array[i] === number) {
-      return true;
+    if (array [i] === number){
+      array.splice(i, 1);
+      i--;
     }
   }
-  return number;
+  return array;
 }
 
-removeFromArray([1, 2, 3, 4], 3);
+
+
+console.log(removeFromArray([1, 2, 3, 4], 3));// should remove 3 and return [1,2,4]
