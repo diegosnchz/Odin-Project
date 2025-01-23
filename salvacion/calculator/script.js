@@ -21,16 +21,23 @@ const divide = (num1, num2) => {
 }
 
 const operate = (operator, num1, num2) => {
-  if (data.operator === 'add') {
-    return num1 + num2;
-  } else if (data.operator === 'substract') {
-    return num1 - num2;
-  } else if (data.operator === 'multiply') {
-    return num1 * num2;
-  } else {
-    return num1/num2;
+  if (operator === 'add') {
+    return add(num1, num2);
+  } else if (operator === 'substract') {
+    return substract(num1,num2);
+  } else if (operator === 'multiply') {
+    return multiply(num1, num2);
+  } else if (operator === 'divide'){
+    return divide(num1, num2);
   }
 }
+
+document.querySelector('#clear').addEventListener("click", () => {
+  data.num1, data.num2 = '';
+  data.operator = null;
+  updateDisplay('');
+})
+
 
 //mostrar contenido en pantalla
 
@@ -64,20 +71,24 @@ document.querySelector("#zero").addEventListener('click', () => handleNumberClic
 
 // teclas operadores
 document.querySelector("#divide").addEventListener('click', () => {
-  data.operator = '/';
+  data.operator = 'divide';
 });
 document.querySelector("#multiply").addEventListener('click', () => {
-  data.operator = '*';
+  data.operator = 'multiply';
 });
 document.querySelector("#add").addEventListener('click', () => {
-  data.operator = '+';
+  data.operator = 'add';
 });
 document.querySelector("#subtract").addEventListener('click', () => {
-  data.operator = '-';
+  data.operator = 'substract';
 });
 
 
 //revisar si está bien esto..
-document.querySelector("#equals").addEventListener("click", (num1, num2) => {
-  equals.textContent = operate(num1, num2);
-})
+document.querySelector("#equals").addEventListener("click", () => {
+  const result = operate(data.operator, parseFloat(data.num1), parseFloat(data.num2));
+  updateDisplay(result);
+  data.num1 = result;
+  data.num2 = '';
+  data.operator = null;
+});
