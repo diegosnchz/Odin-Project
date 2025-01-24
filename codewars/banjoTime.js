@@ -7,3 +7,5 @@ function areYouPlayingBanjo(name) {
     return name + phraseNoah;
   }
 }
+
+console.log(areYouPlayingBanjo("puma"));

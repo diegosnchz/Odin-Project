@@ -33,9 +33,10 @@ const operate = (operator, num1, num2) => {
 }
 
 document.querySelector('#clear').addEventListener("click", () => {
-  data.num1, data.num2 = '';
+  data.num1 = '';
+  data.num2 = '';
   data.operator = null;
-  updateDisplay('');
+  updateDisplay('0');
 })
 
 
@@ -48,10 +49,10 @@ const updateDisplay = (num) => {
 
 const handleNumberClick = (num) => {
   if (data.operator === null) {
-    data.num1 = parseFloat(data.num1 + num);
+    data.num1 = data.num1.toString() + num; //string pa concatenar el numero
     updateDisplay(data.num1);
   } else {
-    data.num2 = parseFloat(data.num2 + num);
+    data.num2 = data.num2.toString() + num;
     updateDisplay(data.num2);
   }
 }
@@ -86,7 +87,7 @@ document.querySelector("#subtract").addEventListener('click', () => {
 
 //revisar si está bien esto..
 document.querySelector("#equals").addEventListener("click", () => {
-  const result = operate(data.operator, parseFloat(data.num1), parseFloat(data.num2));
+  const result = operate(data.operator, parseInt(data.num1), parseInt(data.num2));
   updateDisplay(result);
   data.num1 = result;
   data.num2 = '';
