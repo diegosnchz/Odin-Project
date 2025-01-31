@@ -23,7 +23,7 @@ console.log(fibonacci(15)); // returns 8
 
 function fibonacci2(num) {
   if (num === 0)
-    return (0);
+    return (0);aaaaa
   if (num === 1)
     return (1);
   return (fibonacci2(num - 1) + fibonacci2(num - 2));
