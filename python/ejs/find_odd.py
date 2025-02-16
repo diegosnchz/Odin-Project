@@ -1,6 +1,6 @@
-def find_it(seq):
-    for i, number in enumerate(seq):
-        if number != i+=1:
+# def find_it(seq):
+#     for i, number in enumerate(seq):
+        
             
 
 
